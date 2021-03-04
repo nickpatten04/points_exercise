@@ -4,11 +4,11 @@ To start the service, you can just app.py. To test the routes, you can download 
 
 ## Formats for POST methods:
 
-/users = {"first_name: <string>, "last_name": <string>}\n
-/users/<user_id>/transactions = {"payer": <string>, "points": <int>, "timestamp": <string>} *\n
-/users/<user_id>/points = {"points": <int>"}\n
+- /users = {"first_name: \<string\>, "last_name": \<string\>}
+- /users/<user_id>/transactions = {"payer": \<string\>, "points": \<int\>, "timestamp": \<string\>} __\*__
+- /users/<user_id>/points = {"points": \<int\>"}
   
   
 
 ## Notes
-* - timestamp must be a string in python isoformat
+- __\*__ timestamp must be a string in python isoformat
