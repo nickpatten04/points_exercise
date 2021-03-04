@@ -1,0 +1,1 @@
+COLUMN_EXCLUSION = ("balance", "balance_details")

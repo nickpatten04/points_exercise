@@ -1,0 +1,30 @@
+from module.transaction import Transaction, Transactions
+from module.user import User, Users
+from datetime import datetime
+
+def test_transaction_table():
+    t1 = Transaction(1, 'test1', 100, datetime.now().isoformat())
+    t2 = Transaction(5, 'test2', 200, datetime.now().isoformat())
+    t3 = Transaction(3, 'test3', 300, datetime.now().isoformat())
+
+    t_table = Transactions([])
+    t_table.add(t1)
+    t_table.add(t2)
+    t_table.add(t3)
+
+    [print(r.to_json()) for r in t_table]
+
+def test_user_table():
+    u1 = User("first", "last")
+    u2 = User("first", "last")
+    u3 = User("first", "last")
+
+    u_table = Users([])
+    u_table.add(u1)
+    u_table.add(u2)
+    u_table.add(u3)
+
+    [print(r.__dict__) for r in u_table]
+
+test_user_table()
+test_transaction_table()
